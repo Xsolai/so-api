@@ -41,7 +41,7 @@ async def read_pdf(pdf_data: PDFData):
         reader = PdfReader(temp_file.name)
         text_content = ""
         for page in reader.pages:
-            logger.info(f"Extracting text from page {reader.pages.index(page)}.")
+            # logger.info(f"Extracting text from page {reader.pages.index(page)}.")
             text_content += page.extract_text()
         
         # Close and remove the temporary file
